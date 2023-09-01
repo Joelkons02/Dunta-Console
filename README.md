@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/Joelkons02/Dunta-Console/blob/main/dunta.png?raw=true" alt="Dunta logo">
+  <img src="https://github.com/Joelkons02/Dunta-Console/blob/main/1.png" alt="Dunta logo">
 </p>
 
 <h1 align="center">Dunta Console</h1>
