@@ -1,7 +1,7 @@
 # Dunta-Console
 
 <p align="center">
-  <img "https://drive.google.com/file/d/1cCrRHUnLnoGsiagjyhPtK0Es4A0zkf7g/view?usp=drivesdk" alt="Dunta Logo" width="200">
+  <img "[https://github.com/Joelkons02/Dunta-Console/blob/main/1.png]" alt="Dunta Logo" width="200">
 </p>
 
 ---
