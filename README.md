@@ -1,52 +1,31 @@
-# Dunta-Console
+<p align="center">
+  <img src="https://github.com/Joelkons02/Dunta-Console/blob/main/dunta.png?raw=true" alt="Dunta logo">
+</p>
+
+<h1 align="center">Dunta Console</h1>
+<p align="center">A console application for Dunta.</p>
 
 <p align="center">
-  <img "[https://github.com/Joelkons02/Dunta-Console/blob/main/1.png]" alt="Dunta Logo" width="200">
+  <a href="https://github.com/Joelkons02/Dunta-Console"><img src="https://img.shields.io/github/stars/Joelkons02/Dunta-Console?style=flat-square" alt="GitHub stars"></a>
+  <a href="https://github.com/Joelkons02/Dunta-Console"><img src="https://img.shields.io/github/license/Joelkons02/Dunta-Console?style=flat-square" alt="License"></a>
 </p>
 
 ---
 
-## Table of Contents
-- [Introduction](#introduction)
-- [Features](#features)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Usage](#usage)
-- [Commands](#commands)
-- [Examples](#examples)
-- [Contributing](#contributing)
-- [License](#license)
+## Description
 
----
+Dunta Console is a command-line interface for managing Dunta, a web application for shopping and payments. It provides various commands to interact with the application's backend.
 
-## Introduction
+## Author
 
-Dunta-Console is a powerful command-line interface (CLI) for managing your Dunta application. It provides a convenient way to interact with your data models, perform actions, and streamline your workflow.
-
----
-
-## Features
-
-- Create, view, update, and delete objects
-- Perform various operations on your data
-- User-friendly and intuitive command-line interface
-
----
+**Joel Nchindap**<br>
+GitHub: [Joelkons02](https://github.com/Joelkons02)
 
 ## Getting Started
 
-### Prerequisites
+To get started, follow the steps below:
 
-Make sure you have the following installed:
-
-- Python 3.6+
-- Dunta library
-
-### Installation
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/yourusername/Dunta-Console.git
-cd Dunta-Console
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/Joelkons02/Dunta-Console.git
+   cd Dunta-Console
