@@ -1,13 +1,10 @@
 #!/usr/bin/python3
 """Defines the BaseModel class."""
-from models.engine.file_storage import FileStorage
 from uuid import uuid4
 from datetime import datetime
 
-# Initialize FileStorage
-storage = FileStorage()
-storage.reload()
-
+# Initialize FileStorage (moved to where it's needed)
+# from models.engine.file_storage import FileStorage
 
 class BaseModel:
     """Represents the BaseModel of the Dunta console project."""
@@ -19,6 +16,7 @@ class BaseModel:
             *args (any): Unused.
             **kwargs (dict): Key/value pairs of attributes.
         """
+        from models.engine.file_storage import FileStorage  # Import here to avoid circular import
         timeform = "%Y-%m-%dT%H:%M:%S.%f"
         self.id = str(uuid4())
         self.created_at = datetime.today()
@@ -30,12 +28,13 @@ class BaseModel:
                 else:
                     self.__dict__[k] = v
         else:
-            storage.new(self)
+            FileStorage().new(self)  # Use FileStorage here
 
     def save(self):
         """Update updated_at with the current datetime."""
+        from models.engine.file_storage import FileStorage  # Import here to avoid circular import
         self.updated_at = datetime.today()
-        storage.save()
+        FileStorage().save()
 
     def to_dict(self):
         """Return the dictionary of the BaseModel instance.
