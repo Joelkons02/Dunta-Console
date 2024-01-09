@@ -11,11 +11,6 @@ from models.cart import Cart
 from models.cart_item import CartItem
 from models.payment import Payment
 from models.review import Review
-from tabulate import tabulate
-from colorama import Fore, Style
-
-# Initialize colorama
-Fore.RESET
 
 def parse(arg):
     curly_braces = re.search(r"\{(.*?)\}", arg)
@@ -144,23 +139,13 @@ class DuntaCommand(cmd.Cmd):
         if len(argl) > 0 and argl[0] not in DuntaCommand.__classes:
             print("** class doesn't exist **")
         else:
-            obj_list = []
+            objl = []
             for obj in storage.all().values():
                 if len(argl) > 0 and argl[0] == obj.__class__.__name__:
-                    obj_list.append(obj.to_dict())
+                    objl.append(obj.__str__())
                 elif len(argl) == 0:
-                    obj_list.append(obj.to_dict())
-
-            if obj_list:
-                headers = [key for key in obj_list[0].keys()]
-                data = [[obj[key] for key in headers] for obj in obj_list]
-
-                # Add color to headers
-                colored_headers = [Fore.BLUE + Style.BRIGHT + header + Style.RESET_ALL for header in headers]
-
-                print(tabulate(data, headers=colored_headers, tablefmt="fancy_grid"))
-            else:
-                print("No instances found.")
+                    objl.append(obj.__str__())
+            print(objl)
 
     def do_count(self, arg):
         """Usage: count <class> or <class>.count()
